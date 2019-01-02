@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+
+body{
+	background: #ffffff;
+}
+
+.mainContainer{
+	height: 50vw;
+	width: 30vw;
+	overflow: auto;
+	position: absolute;
+    top:0;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    margin:auto;
+}
+.container-timer{	
+	display: flex;
+	height: 20%;
+}
+
+.container-1{
+	display: flex;
+	height: 20%;
+}
+
+.container-2{
+	display: flex;
+	height: 20%;
+}
+
+.container-3{
+	display: flex;
+	height: 20%;
+}
+.container-reset{
+	display: flex;
+	height: 20%;
+}
+.mainContainer div div{
+	border: 1px #ffffff solid;
+	padding: 10px;
+
+}
+.mainContainer div div:hover{
+	opacity: 0.85;
+}
+
+#box-1{
+	background: #B22222;
+	flex:1;
+	order:1;
+}
+#box-2{
+	background: #B22222;
+	flex:1;
+	order:2;
+}
+#box-3{
+	background: #B22222;
+	flex:1;
+	order:3;
+}
+
+#box-4{
+	background: #B22222;
+	flex:1;
+	order:1;
+}
+#box-5{
+	background: #B22222;
+	flex:1;
+	order:2;
+}
+#box-6{
+	background: #B22222;
+	flex:1;
+	order:3;
+}
+
+#box-7{
+	background: #B22222;
+	flex:1;
+	order:1;
+}
+#box-8{
+	background: #B22222;
+	flex:1;
+	order:2;
+}
+#box-9{
+	background: #B22222;
+	flex:1;
+	order:3;
+}
+#reset{
+	flex:1;
+}
+
+.Timer{
+	background: #000000;
+	opacity: 0.4;
+}
