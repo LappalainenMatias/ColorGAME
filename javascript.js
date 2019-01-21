@@ -3,6 +3,24 @@ var listOfSquares = []
 listTransparents()
 var wins = 0
 var gameFinished = false
+var number = 3
+
+function sleepBeforeStart(){
+	allToWhite();
+	CountDown();
+}
+function CountDown(){
+	document.getElementById("box-5").textContent=number;
+	if (number == 0){
+		document.getElementById("box-5").textContent="";
+		number = 3
+		reset()
+	}
+	else{
+		number = number - 1 
+		setTimeout(CountDown, 1000);
+	}
+}
 function changeColor(id){
 	if (gameFinished != true){
 	var element = document.getElementById(id);
@@ -148,6 +166,19 @@ function allToBlue(){
 		document.getElementById("box-8").style.background="#0000FF";
 		document.getElementById("box-9").style.background="#0000FF";
 }
+
+function allToWhite(){
+		document.getElementById("box-1").style.background="#ffffff";
+		document.getElementById("box-2").style.background="#ffffff";
+		document.getElementById("box-3").style.background="#ffffff";
+		document.getElementById("box-4").style.background="#ffffff";
+		document.getElementById("box-5").style.background="#ffffff";
+		document.getElementById("box-6").style.background="#ffffff";
+		document.getElementById("box-7").style.background="#ffffff";
+		document.getElementById("box-8").style.background="#ffffff";
+		document.getElementById("box-9").style.background="#ffffff";
+}
+
 
 var interval = ""
 function startTimer(){
