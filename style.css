@@ -17,7 +17,7 @@ body{
 }
 .container-timer{	
 	display: flex;
-	height: 20%;
+	height: 15%;
 }
 
 .container-1{
@@ -36,7 +36,7 @@ body{
 }
 .container-reset{
 	display: flex;
-	height: 20%;
+	height: 15%;
 }
 .mainContainer div div{
 	border: 1px #ffffff solid;
@@ -98,7 +98,23 @@ body{
 	flex:1;
 }
 
-.Timer{
-	background: #000000;
-	opacity: 0.4;
+#countdown{
+	width: 100%;
+	text-align: center;
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 3vw;
+}
+
+#resetP{
+	width: 100%;
+	text-align: center;
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 3vw;
+}
+
+#Timer{
+	width: 100%;
+	text-align: center;
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 3vw;
 }

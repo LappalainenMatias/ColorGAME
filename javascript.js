@@ -5,14 +5,25 @@ var wins = 0
 var gameFinished = false
 var number = 3
 
+jQuery("p").fitText(0.90);
+
 function sleepBeforeStart(){
+	wins = 0
+	clearInterval(interval)
+	document.getElementById('Timer').textContent = "0.0";
 	allToWhite();
 	CountDown();
 }
+
 function CountDown(){
-	document.getElementById("box-5").textContent=number;
-	if (number == 0){
-		document.getElementById("box-5").textContent="";
+	if(number == 0){
+		document.getElementById("countdown").textContent="GO!";
+	}
+	else{
+		document.getElementById("countdown").textContent=number;
+	}
+	if (number == -1){
+		document.getElementById("countdown").textContent="";
 		number = 3
 		reset()
 	}
@@ -179,6 +190,10 @@ function allToWhite(){
 		document.getElementById("box-9").style.background="#ffffff";
 }
 
+function round(value, precision) {
+    var multiplier = Math.pow(10, precision || 0);
+    return Math.round(value * multiplier) / multiplier;
+}
 
 var interval = ""
 function startTimer(){
@@ -186,8 +201,8 @@ function startTimer(){
 	var start = Date.now();
 	interval = setInterval(function() {
     var delta = Date.now() - start; // milliseconds elapsed since start
-   	document.getElementById('Timer').textContent = delta/1000;
-}, 1);
+   	document.getElementById('Timer').textContent = round(delta/1000,1).toFixed(1);
+}, 50);
 }
 
 function reset(){
